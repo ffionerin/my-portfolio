@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -7,9 +8,45 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  }
+nav {
+  background-color: grey;
 }
 
-h1,
+#navBar {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 5%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navBar h1{
+  width: 25%;
+  font-weight: 500;
+  font-size: 30px;
+  color: white;
+  background-color: lightcoral;
+}
+
+#navigation {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+#navigation a {
+  color: white
+}
+
+/* not needed?
+nav {
+  height;: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
 h2,
 h3,
 h4,
