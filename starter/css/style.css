@@ -27,7 +27,7 @@ nav {
   font-size: 30px;
   color: white;
   background-color: lightcoral;
-}
+ }
 
 #navigation {
   display: flex;
@@ -37,6 +37,27 @@ nav {
 
 #navigation a {
   color: white
+}
+
+.hero-banner {
+  margin: 0px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-image: url("../images/02-hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-banner img {
+  width: 40%;
+  height: auto;
+}
+
+.hero-banner h2 {
+color: lightcoral;
+background-color: grey;
+margin-bottom: 20px;
 }
 
 /* not needed?
