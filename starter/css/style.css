@@ -60,6 +60,77 @@ background-color: grey;
 margin-bottom: 20px;
 }
 
+#about
+{ margin: 0px 5%;
+margin-left: 300px;
+padding: 20px;
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
+#work {
+  margin: 0px 5%;
+  margin-left: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 400px 200px 200px;
+  grid-template-areas:
+  "horiseon horiseon"
+  "project-2 project-3"
+  "project-4 project-5"
+}
+
+#horiseon {
+  grid-area: horiseon;
+  background-image: url("../images/horiseon-image.png");
+}
+
+#project-2 {
+  grid-area: project-2;
+  background-image: url("../images/02-portfolio-2.jpg")
+}
+
+#project-3 {
+  grid-area: project-3;
+  background-image: url("../images/02-portfolio-3.jpg")
+}
+
+#project-4 {
+  grid-area: project-4;
+  background-image: url("../images/02-portfolio-4.jpg")
+}
+
+#project-5 {
+  grid-area: project-5;
+  background-image: url("../images/02-run-buddy.jpg")
+}
+
+.workgridarea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: flex-end;
+  justify-content: start;
+}
+
+.heading {
+  background-color: gray; opacity:0.6;
+  padding: 20px;
+  padding-bottom: 40px;
+  height: 25px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  
+
+
+}
+
 /* not needed?
 nav {
   height;: 50px;
