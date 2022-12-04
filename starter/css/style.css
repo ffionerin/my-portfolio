@@ -56,20 +56,165 @@ nav {
 
 .hero-banner h2 {
 color: lightcoral;
-background-color: grey;
+background-color: lightgrey;
 margin-bottom: 20px;
 }
 
-#about
+main {
+  display: grid;
+  margin: 0px 5%;
+  background-color: lightgrey;
+  grid-template-columns: 2fr 3fr 3fr;
+  grid-template-rows: 200px 400px 200px 200px 120px;
+  grid-template-areas:
+  "about-me-header about-me-content about-me-content"
+  "work-header horiseon horiseon"
+  "work-header project-2 project-3"
+  "work-header project-4 project-5"
+  "contact-header contact-content contact-content"
+}
+
+
+.subheading {
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+  font-size: 30px;
+  
+}
+
+#about-me-header {
+  grid-area: about-me-header;
+    }
+
+#about-me-content {
+  grid-area: about-me-content;
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin: 5px;
+  padding: 2%;
+  background-color: darkgrey; opacity: 0.8;
+}
+
+.content {
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+}
+
+#work-header {
+  grid-area: work-header;
+}
+
+#horiseon {
+  grid-area: horiseon;
+  display: flex;
+  background-image: url("../images/horiseon-image.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  margin: 5px
+}
+
+#project-2 {
+  grid-area: project-2;
+  display: flex;
+  background-image: url("../images/02-portfolio-2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin: 5px
+}
+
+#project-3 {
+  grid-area: project-3;
+  display: flex;
+  background-image: url("../images/02-portfolio-3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin: 5px
+}
+
+#project-4 {
+  grid-area: project-4;
+  display: flex;
+  background-image: url("../images/02-portfolio-4.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin: 5px
+}
+
+#project-5 {
+  grid-area: project-5;
+  display: flex;
+  background-image: url("../../starter/images/02-portfolio-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin: 5px
+}
+
+#contact-header {
+  grid-area: contact-header;
+  display: flex;
+  justify-items: flex-end;
+  align-items: flex-start;
+  
+}
+
+#contact-content {
+  grid-area: contact-content;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5px;
+  background-color: darkgrey; opacity: 0.8;
+}
+
+.content h4 {
+  background-color: gray; opacity:0.6;
+  padding: 20px;
+  padding-bottom: 40px;
+  height: 25px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+/*  */
+
+/* .main-grid-area {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+} */
+
+/* #about
 { margin: 0px 5%;
 margin-left: 300px;
 padding: 20px;
 display: flex;
 justify-content: center;
 align-content: center;
-}
+} */
 
-#work {
+/* #work {
   margin: 0px 5%;
   margin-left: 300px;
   display: grid;
@@ -129,7 +274,7 @@ align-content: center;
   
 
 
-}
+} */
 
 /* not needed?
 nav {
@@ -139,7 +284,7 @@ nav {
   align-items: center;
 } */
 
-h2,
+/* h2,
 h3,
 h4,
 h5,
@@ -149,4 +294,4 @@ h6 {
 
 p {
   margin: 0;
-}
+} */
