@@ -68,7 +68,7 @@ main {
   grid-template-rows: 200px 400px 200px 200px 120px;
   grid-template-areas:
   "about-me-header about-me-content about-me-content"
-  "work-header horiseon horiseon"
+  "work-header study-guide study-guide"
   "work-header project-2 project-3"
   "work-header project-4 project-5"
   "contact-header contact-content contact-content"
@@ -80,7 +80,15 @@ main {
   justify-content: flex-end;
   align-items: start;
   font-size: 30px;
+  margin-right: 5px;
+  margin-top: 20px;
+  border-right-style: solid;
+  border-right-width: 5px; border-right-color: lightcoral;
   
+}
+
+h3 {
+  margin-right: 10px;
 }
 
 #about-me-header {
@@ -93,7 +101,7 @@ main {
   align-content: center;
   justify-content: start;
   flex-wrap: wrap;
-  margin: 5px;
+  margin: 20px 5px 0px 5px;
   padding: 2%;
   background-color: darkgrey; opacity: 0.8;
 }
@@ -108,10 +116,10 @@ main {
   grid-area: work-header;
 }
 
-#horiseon {
-  grid-area: horiseon;
+#study-guide {
+  grid-area: study-guide;
   display: flex;
-  background-image: url("../images/horiseon-image.png");
+  background-image: url("../images/10+tips+for+successful+studying+3+OP.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -119,7 +127,7 @@ main {
   border-style: solid;
   border-width: 3px;
   border-color: black;
-  margin: 5px
+  margin: 20px 5px 5px 5px;
 }
 
 #project-2 {
@@ -193,6 +201,17 @@ main {
   font-weight: bold;
   margin-bottom: 20px;
 }
+/* 
+.grow { 
+  transition: all .2s; 
+  -o-transition: all .2;
+ -webkit-transition: all .2s;
+  -moz-transition: .6s;
+  }
+
+.grow:hover { 
+  transform: scale(1.3); 
+  } */
 
 
 /*  */
@@ -221,7 +240,7 @@ align-content: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 400px 200px 200px;
   grid-template-areas:
-  "horiseon horiseon"
+  "study-guide study-guide"
   "project-2 project-3"
   "project-4 project-5"
 }
