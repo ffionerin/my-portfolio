@@ -9,8 +9,8 @@ body {
   line-height: 1.5;
 }
 
-
-#navBar {
+/* Styling for header - including header and nagivation links */
+header {
   background-color: grey;
   display: flex;
   flex-direction: row;
@@ -19,24 +19,31 @@ body {
   align-items: center;
 }
 
-#navBar h1 {
+/* Specific styling for main header */
+header h1 {
   width: 25%;
   font-weight: 500;
   font-size: 30px;
   color: white;
   background-color: lightcoral;
+  border-style: solid;
+  border-color: darkgrey;
+  border-width: 2px;
 }
 
+/* Styling for the background of the nagivation links */
 #navigation {
   display: flex;
   width: 50%;
   justify-content: space-evenly;
 }
 
+/* Font color for the navigation links */
 #navigation a {
   color: white
 }
 
+/* Styling for the whole hero banner including bacground image */
 .hero-banner {
   margin: 0px 5%;
   display: flex;
@@ -47,17 +54,23 @@ body {
   background-size: cover;
 }
 
+/* size for the profile picture image */
 .hero-banner img {
   width: 160px;
   height: auto;
 }
 
+/* Style for subtitle including background and font color */
 .hero-banner h2 {
   color: lightcoral;
   background-color: lightgrey;
   margin-bottom: 20px;
+  border-style: solid;
+  border-color: darkgray;
+  border-width: 2px;
 }
 
+/* grid layout and style for the main content section of the page */
 main {
   display: grid;
   margin: 0px 5%;
@@ -72,7 +85,7 @@ main {
     "contact-header contact-content contact-content"
 }
 
-
+/* Styling for containers of subheadings along the left side of the page including colour and positioning */
 .subheading {
   display: flex;
   justify-content: flex-end;
@@ -86,122 +99,114 @@ main {
 
 }
 
+/* Styling for subeading themselves along left side of page */
 h3 {
-  margin-right: 10px;
+  margin: 10px 10px;
 }
 
+/* asigning 'About Me' 'Work' and 'Contact' headers to grid position'. Added 5px to bottom margin of 'work' so border would align with content on right*/
 #about-me-header {
   grid-area: about-me-header;
 }
 
-#about-me-content {
-  grid-area: about-me-content;
-  display: flex;
-  align-content: center;
-  justify-content: start;
-  flex-wrap: wrap;
-  font-weight: bold;
-  margin: 20px 5px 0px 5px;
-  padding: 2%;
-  background-color: darkgrey;
-  opacity: 0.8;
+#work-header {
+  grid-area: work-header;
+  margin-bottom: 5px
 }
 
+#contact-header {
+  grid-area: contact-header;
+}
+
+/* Applying borders to all content items (main items on the right of the page) */
 .content {
   border-style: solid;
   border-width: 3px;
   border-color: black;
 }
 
-#work-header {
-  grid-area: work-header;
-  margin-bottom: 5px;
-}
-
-#study-guide {
-  grid-area: study-guide;
+/* Styling for all features within the 'work' area of the grid area including background image placement and color to disappear on hover */
+.work-grid {
   display: flex;
-  background-image: url("../images/10+tips+for+successful+studying+3+OP.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
-  border-style: solid;
-  border-width: 3px;
-  border-color: black;
+  margin: 5px;
+  color: black;
+  opacity: 0.7;
+  transition: all 0.5s ease-in-out;
+}
+
+/* applying rules to items within the 'work' area of the grid on hover */
+.work-grid:hover {
+  color: black;
+  opacity: 1.0
+}
+
+/* Asigning projects to corresponding places within CSS grid. Adding background images. Unique margins for first project for alignment with rest of page */
+#study-guide {
+  grid-area: study-guide;
+  background-image: url("../images/10+tips+for+successful+studying+3+OP.jpg");
   margin: 20px 5px 5px 5px;
 }
 
 #project-2 {
   grid-area: project-2;
-  display: flex;
   background-image: url("../images/02-portfolio-2.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  margin: 5px
 }
 
 #project-3 {
   grid-area: project-3;
-  display: flex;
   background-image: url("../images/02-portfolio-3.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  margin: 5px
 }
 
 #project-4 {
   grid-area: project-4;
-  display: flex;
   background-image: url("../images/02-portfolio-4.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  margin: 5px
 }
 
 #project-5 {
   grid-area: project-5;
-  display: flex;
   background-image: url("../../starter/images/02-portfolio-1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  margin: 5px
 }
 
-#contact-header {
-  grid-area: contact-header;
+/* styling for content outside of the 'work' grid area */
+#about-me-content,
+#contact-content {
+  background-color: darkgrey;
+  opacity: 0.8;
   display: flex;
-  justify-items: flex-end;
-  align-items: flex-start;
+}
 
+/* Asigning grid areas to 'about me' and 'contact me' sections. applying specific positioning rules, margin and padding to those areas */
+#about-me-content {
+  grid-area: about-me-content;
+  align-content: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  font-weight: bold;
+  margin: 20px 5px 5px 5px;
+  padding: 2%;
 }
 
 #contact-content {
   grid-area: contact-content;
-  display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 20px 5px 5px 5px;
-  background-color: darkgrey;
-  opacity: 0.8;
+  margin: 20px 5px 5px 10px;
 }
 
+/* Font size and color for the hyperlinks within the 'contact me' section */
 #contact-content a {
   font-size: 20px;
   color: black
 }
 
+/* Styling for each of the subtitles on the work grid area */
 .content h4 {
-  background-color: gray;
-  opacity: 0.6;
+  background-color: darkgrey;
+  opacity: 0.7;
   padding: 20px;
   padding-bottom: 40px;
   height: 25px;
@@ -211,59 +216,34 @@ h3 {
   margin-bottom: 20px;
 }
 
-
-#study-guide,
-#project-1,
-#project-2,
-#project-3,
-#project-4,
-#project-5 {
-  color: black;
-  opacity: 0.6;
-  transition: all 0.5s ease-in-out;
-}
-
-#study-guide:hover,
-#project-1:hover,
-#project-2:hover,
-#project-3:hover,
-#project-4:hover,
-#project-5:hover {
-  color: black;
-  opacity: 1.0
-}
-
+/* media queries to change layout and style for different screen sizes */
 @media screen and (max-width: 979px) {
-  #navBar {
-    display: flex;
+  header {
     flex-direction: column;
   }
 
-  #navigation {
-    display: flex;
-    width: 50%;
-    justify-content: space-evenly;
-  }
-
+  /* changed styling of 'about me', 'work' and 'contact me' subheadings as they now appear on top of content rather than to left.
+changed border from right to bottom:
+adjusted font size to be suitable for screen size; */
   .subheading {
-    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    margin: 10px;
+    margin: 5px;
     border-bottom-style: solid;
     border-bottom-width: 5px;
     border-bottom-color: lightcoral;
     border-right: none;
   }
 
+  /* aligned h1 text in center as moved to middle of screen for this screen size */
   h1 {
     text-align: center;
+    width: 60%;
   }
 
+  /* provided new structure for CSS that is more suitable for screen size */
   main {
-    display: grid;
-    margin: 0px 5%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 80px 200px 80px 400px 200px 200px 80px 100px;
     grid-template-areas:
@@ -277,82 +257,25 @@ h3 {
       "contact-content contact-content"
   }
 
+  /* adjusted font size and margin for smaller screen  */
   #about-me-content {
     font-size: 1.7vmax;
-    font-weight: bold;
-    margin: 0px 5px;
-    padding: 3%;
-  }
-
-  #study-guide {
     margin: 0px 5px;
   }
 
-  .subheading {
-    margin: 5px;
-  }
-
+  /* adjusted margins to bring subheadings closer to the corresponding content */
+  #study-guide,
   #contact-content {
     margin: 0px 5px;
   }
 
 }
 
+/* media queries below for smaller screen size  */
 @media screen and (max-width: 769px) {
 
-  #navBar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  #navigation {
-    display: flex;
-    width: 90%;
-    justify-content: space-evenly;
-  }
-
-  #navBar h1 {
-    width: 70%;
-  }
-
-
-  .hero-banner {
-    margin: 0px 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hero-banner img {
-    width: 100px;
-    height: auto;
-  }
-
-  .hero-banner h2 {
-    margin-bottom: 0px;
-    font-size: 20px;
-
-  }
-
-
-  .subheading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    margin: 10px;
-    border-bottom-style: solid;
-    border-bottom-width: 5px;
-    border-bottom-color: lightcoral;
-    border-right: none;
-  }
-
-
+/* alternative grid layout for small screen size */
   main {
-    display: grid;
-    margin: 0px 5%;
     grid-template-columns: 1fr;
     grid-template-rows: 80px fit-content(150px) 80px 150px 150px 150px 150px 150px 80px 200px;
     grid-template-areas:
@@ -368,184 +291,40 @@ h3 {
       "contact-content"
   }
 
-  #about-me-content {
-    font-size: 1.6vmax;
-    font-weight: bold;
-    margin: 0px 5px;
-    padding: 2%;
+  /* adjusted width of navigation and header so they are suitable for smalle screen layout */
+  #navigation {
+    width: 80%;
+  }
+
+  header h1 {
+    width: 60%;
+  }
+
+  /* adjusted positioning and size of items within the hero banner */
+  .hero-banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-banner img {
+    width: 100px;
+    height: auto;
+  }
+
+  .hero-banner h2 {
+    margin-bottom: 0px;
+    font-size: 20px;
   }
 
   #study-guide {
     margin: 0px 5px 5px 5px;
   }
 
-  .subheading {
-    margin: 5px;
-  }
-
+  /* changed flex direction so links stack vertically */
   #contact-content {
     margin: 0px 5px;
     flex-direction: column;
   }
 
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-/* #navBar {
-  display: flex;
-  flex-direction: row;
-  margin: 0px 5%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#navBar h1{
-  width: 25%;
-  font-weight: 500;
-  font-size: 30px;
-  color: white;
-  background-color: lightcoral;
- } */
-
-
-/* @media only screen and (max-width: 1000px) {
-    #navigation {
-    display: none;
-  }
-  .icons {
-    margin-left: auto;
-  }
-} */
-
-/* @media only screen and (max-width: 600px) {
-  #headline {
-    position: static;
-    margin: 20px;
-  }
-  #heroGrid {
-    grid-template-areas:
-    "featuredProduct featuredProduct"
-    "secondaryProduct CTA";
-  }
-  #categoryGrid {
-    grid-template-rows: 300px 300px 300px 300px 300px;
-    grid-template-columns: 80vw;
-    grid-template-areas:
-      "bookcases"
-      "bedroom"
-      "patio"
-      "couches"
-      "desks"
-    ;
-  }
-} */
-
-
-/*  */
-
-/* .main-grid-area {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 5px;
-  cursor: pointer;
-} */
-
-/* #about
-{ margin: 0px 5%;
-margin-left: 300px;
-padding: 20px;
-display: flex;
-justify-content: center;
-align-content: center;
-} */
-
-/* #work {
-  margin: 0px 5%;
-  margin-left: 300px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 400px 200px 200px;
-  grid-template-areas:
-  "study-guide study-guide"
-  "project-2 project-3"
-  "project-4 project-5"
-}
-
-#horiseon {
-  grid-area: horiseon;
-  background-image: url("../images/horiseon-image.png");
-}
-
-#project-2 {
-  grid-area: project-2;
-  background-image: url("../images/02-portfolio-2.jpg")
-}
-
-#project-3 {
-  grid-area: project-3;
-  background-image: url("../images/02-portfolio-3.jpg")
-}
-
-#project-4 {
-  grid-area: project-4;
-  background-image: url("../images/02-portfolio-4.jpg")
-}
-
-#project-5 {
-  grid-area: project-5;
-  background-image: url("../images/02-run-buddy.jpg")
-}
-
-.workgridarea {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 5px;
-  cursor: pointer;
-  display: grid;
-  align-content: flex-end;
-  justify-content: start;
-}
-
-.heading {
-  background-color: gray; opacity:0.6;
-  padding: 20px;
-  padding-bottom: 40px;
-  height: 25px;
-  color: black;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  
-
-
-} */
-
-/* not needed?
-nav {
-  height;: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
 }
