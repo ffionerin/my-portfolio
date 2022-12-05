@@ -10,7 +10,7 @@ body {
 }
 
 /* Styling for header - including header and nagivation links */
-header {
+.navigation-bar {
   background-color: grey;
   display: flex;
   flex-direction: row;
@@ -20,7 +20,7 @@ header {
 }
 
 /* Specific styling for main header */
-header h1 {
+h1 {
   width: 25%;
   font-weight: 500;
   font-size: 30px;
@@ -32,14 +32,14 @@ header h1 {
 }
 
 /* Styling for the background of the nagivation links */
-#navigation {
+#navigation-links {
   display: flex;
   width: 50%;
   justify-content: space-evenly;
 }
 
 /* Font color for the navigation links */
-#navigation a {
+#navigation-links a {
   color: white
 }
 
@@ -218,7 +218,8 @@ h3 {
 
 /* media queries to change layout and style for different screen sizes */
 @media screen and (max-width: 979px) {
-  header {
+
+  .navigation-bar {
     flex-direction: column;
   }
 
@@ -292,11 +293,11 @@ adjusted font size to be suitable for screen size; */
   }
 
   /* adjusted width of navigation and header so they are suitable for smalle screen layout */
-  #navigation {
+  #navigation-links {
     width: 80%;
   }
 
-  header h1 {
+  h1 {
     width: 60%;
   }
 
