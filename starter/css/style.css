@@ -219,7 +219,7 @@ h3 {
   color: black; opacity: 1.0
 }
 
-@media (max-width: 979px) {
+@media screen and (max-width: 979px) {
 #navBar {
   display: flex;
   flex-direction: column;
@@ -280,7 +280,7 @@ h1 {text-align: center;}
 
   }
 
-@media (max-width: 769px) {
+@media screen and (max-width: 769px) {
   
    #navBar {
     display: flex;
