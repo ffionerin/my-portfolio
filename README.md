@@ -1,4 +1,4 @@
-## my-portfolio
+# my-portfolio
 
 ## Description
 
@@ -13,7 +13,7 @@ The application includes adjustments for various screen sizes.
 
 ## Screenshot
 
-![Screenshot of Ffion Burke's porfolio](../my-portfolio/starter/images/screencapture-ffionerin-github-io-my-portfolio-2022-12-05-23_03_22.png)
+![Screenshot of Ffion Burke's porfolio](starter/images/screencapture-ffionerin-github-io-my-portfolio-2022-12-05-23_03_22.png)
 
 ## Link 
 
