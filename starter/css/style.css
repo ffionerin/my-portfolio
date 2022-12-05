@@ -9,11 +9,10 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
   }
-nav {
-  background-color: grey;
-}
+
 
 #navBar {
+  background-color: grey;
   display: flex;
   flex-direction: row;
   margin: 0px 5%;
@@ -247,29 +246,139 @@ h1 {text-align: center;}
   main {
     display: grid;
     margin: 0px 5%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 80px 200px 80px 200px 200px 200px 200px 200px 80px 200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 200px 80px 400px 200px 200px 80px 100px;
     grid-template-areas:
-    "about-me-header"
-    "about-me-content"
-    "work-header"
-    "study-guide"
-    "project-2"
-    "project-3"
-    "project-4"
-    "project-5"
-    "contact-header"
-    "contact-content"
+    "about-me-header about-me-header"
+    "about-me-content about-me-content"
+    "work-header work-header"
+    "study-guide study-guide"
+    "project-2 project-3"
+    "project-4 project-5"
+    "contact-header contact-header"
+    "contact-content contact-content"
+  }
+
+   #about-me-content {
+    font-size: 1.7vmax;
+    font-weight: bold;
+    margin: 0px 5px;
+    padding: 3%;
+  }
+
+  #study-guide {
+    margin: 0px 5px;
+  }
+
+  .subheading {
+    margin: 5px;
+  }
+
+  #contact-content {
+    margin: 0px 5px;
   }
 
   }
 
-@media (max-width: 400px) {
+@media (max-width: 769px) {
+  
+   #navBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #navigation {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+  }
+
+  #navBar h1{
+    width: 70%;
+   }
+  
+
+  .hero-banner {
+    margin: 0px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+  }
+  
+  .hero-banner img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .hero-banner h2 {
+  margin-bottom: 0px;
+  font-size: 20px;
+
+  }
+  
+  
+  .subheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin:10px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px; border-bottom-color: lightcoral;
+    border-right: none;}
+  
+  
+    main {
+      display: grid;
+      margin: 0px 5%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 80px 150px 80px 150px 150px 150px 150px 150px 80px 200px;
+      grid-template-areas:
+      "about-me-header"
+      "about-me-content"
+      "work-header"
+      "study-guide"
+      "project-2"
+      "project-3"
+      "project-4"
+      "project-5"
+      "contact-header"
+      "contact-content"
+    }
+  
+     #about-me-content {
+      font-size: 1.6vmax;
+      font-weight: bold;
+      margin: 0px 5px;
+      padding: 2%;
+    }
+  
+    #study-guide {
+      margin: 0px 5px 5px 5px;
+    }
+  
+    .subheading {
+      margin: 5px;
+    }
+  
+    #contact-content {
+      margin: 0px 5px;
+    flex-direction: column;
+  }
+
+
+
+
+
+
+
+
+}
 
   
-#contact-header {display: none}
-  #work-header {display: none}
-  #about-me-header {display: none} }
+
 
 
 
