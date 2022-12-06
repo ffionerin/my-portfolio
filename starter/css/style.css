@@ -20,7 +20,7 @@ body {
 }
 
 /* Specific styling for main header */
-h1 {
+.navigation-bar h1 {
   width: 25%;
   font-weight: 500;
   font-size: 30px;
@@ -177,6 +177,7 @@ h3 {
   background-color: darkgrey;
   opacity: 0.8;
   display: flex;
+  margin: 20px 5px 5px 5px;
 }
 
 /* Asigning grid areas to 'about me' and 'contact me' sections. applying specific positioning rules, margin and padding to those areas */
@@ -186,7 +187,6 @@ h3 {
   justify-content: start;
   flex-wrap: wrap;
   font-weight: bold;
-  margin: 20px 5px 5px 5px;
   padding: 2%;
 }
 
@@ -194,7 +194,6 @@ h3 {
   grid-area: contact-content;
   justify-content: space-evenly;
   align-items: center;
-  margin: 20px 5px 5px 10px;
 }
 
 /* Font size and color for the hyperlinks within the 'contact me' section */
@@ -246,7 +245,7 @@ adjusted font size to be suitable for screen size; */
   /* provided new structure for CSS that is more suitable for screen size */
   main {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 200px 80px 400px 200px 200px 80px 100px;
+    grid-template-rows: 80px fit-content(150px) 80px 400px 200px 200px 80px 100px;
     grid-template-areas:
       "about-me-header about-me-header"
       "about-me-content about-me-content"
@@ -260,8 +259,8 @@ adjusted font size to be suitable for screen size; */
 
   /* adjusted font size and margin for smaller screen  */
   #about-me-content {
-    font-size: 1.7vmax;
     margin: 0px 5px;
+    font-size: 15px;
   }
 
   /* adjusted margins to bring subheadings closer to the corresponding content */
