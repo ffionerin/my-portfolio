@@ -274,7 +274,7 @@ adjusted font size to be suitable for screen size; */
 /* media queries below for smaller screen size  */
 @media screen and (max-width: 769px) {
 
-/* alternative grid layout for small screen size */
+  /* alternative grid layout for small screen size */
   main {
     grid-template-columns: 1fr;
     grid-template-rows: 80px fit-content(150px) 80px 150px 150px 150px 150px 150px 80px 200px;
