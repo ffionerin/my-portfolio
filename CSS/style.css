@@ -168,7 +168,7 @@ h3 {
 
 #project-5 {
   grid-area: project-5;
-  background-image: url("../../starter/images/02-portfolio-1.jpg");
+  background-image: url("../images/02-portfolio-1.jpg");
 }
 
 /* styling for content outside of the 'work' grid area */
